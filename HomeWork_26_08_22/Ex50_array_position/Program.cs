@@ -4,7 +4,6 @@
 //17 -> такого числа в массиве нет
 int[,] FillArray(int[,] matr)                   //заполнение и печать массива
 {
-    Console.WriteLine();
     int[,] matrix = new int[matr.GetLength(0), matr.GetLength(1)];
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -19,7 +18,6 @@ int[,] FillArray(int[,] matr)                   //заполнение и печ
 }
 void SeachPosition(int[,] matr, int pos)       //поиск элемента по индексу
 {
-    Console.WriteLine();
     int a = pos / 10;
     int b = pos % 10;
     if (a >= matr.GetLength(0) || b >= matr.GetLength(1))
@@ -37,6 +35,6 @@ int n = Convert.ToInt32(new Random().Next(1, 10));
 int[,] array = new int[m, n];
 int[,] matrix = FillArray(array);
 Console.WriteLine();
-Console.WriteLine("Какой элемент вы хотели бы найти? Введите индекс в формате ab, где a - номер строки,  b - номер столбца");
+Console.WriteLine("Какой элемент вы хотели бы найти? Введите индекс в формате ab, где a - номер строки,  b - номер столбца, с учетом, что нумерация идет с '0'");
 int position = Convert.ToInt32(Console.ReadLine());
 SeachPosition(matrix, position);
