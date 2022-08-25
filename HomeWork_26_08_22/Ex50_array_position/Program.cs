@@ -2,7 +2,7 @@
 //1 4 7 2
 //5 9 2 3
 //17 -> такого числа в массиве нет
-int[,] FillArray(int[,] matr)
+int[,] FillArray(int[,] matr)                   //заполнение и печать массива
 {
     Console.WriteLine();
     int[,] matrix = new int[matr.GetLength(0), matr.GetLength(1)];
@@ -17,7 +17,7 @@ int[,] FillArray(int[,] matr)
     }
     return  matrix;
 }
-void SeachPosition(int[,] matr, int pos)
+void SeachPosition(int[,] matr, int pos)       //поиск элемента по индексу
 {
     Console.WriteLine();
     int a = pos / 10;
