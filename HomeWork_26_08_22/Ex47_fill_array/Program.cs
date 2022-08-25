@@ -8,13 +8,12 @@ void FillArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().NextDouble() * 20 - 10;;    
+            matr[i,j] = new Random().NextDouble() * 20 - 10;    
             Console.Write($"{Math.Round(matr[i, j], 1)}\t");
         }
         Console.WriteLine();
     }
 }
-Console.WriteLine();
 Console.Write("Введите размер матрицы. Укажите количество строк m = ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("  и столбцов n = ");
