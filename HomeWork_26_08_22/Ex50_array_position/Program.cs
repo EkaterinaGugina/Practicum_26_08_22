@@ -39,3 +39,4 @@ Console.WriteLine();
 Console.WriteLine("Какой элемент вы хотели бы найти? Введите индекс в формате ab, где a - номер строки,  b - номер столбца, с учетом, что нумерация идет с '0'");
 int position = Convert.ToInt32(Console.ReadLine());
 SeachPosition(matrix, position);
+
