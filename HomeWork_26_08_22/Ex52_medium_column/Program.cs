@@ -2,7 +2,6 @@
 //  1 4 7 2
 //  5 9 2 3
 //  Среднее арифметическое каждого столбца: 3; 6,5; 4,5; 2,5.
-
 void FillArray(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -24,10 +23,11 @@ void AverageColumn(int[,] matr)    //считает среднее арифме�
             {
                 medium += matr[i, j];   
             }
-            Console.Write($" {medium / matr.GetLength(0)} ");
+            medium = Math.Round(medium / matr.GetLength(0), 2);
+            Console.Write($" {medium} ");
         }
 }
-Console.Write("Введите размер матрицы. Укажите количество строк m = ");
+Console.Write("Введите размер матрицы: укажите количество строк m = ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("  и столбцов n = ");
 int n = Convert.ToInt32(Console.ReadLine());
