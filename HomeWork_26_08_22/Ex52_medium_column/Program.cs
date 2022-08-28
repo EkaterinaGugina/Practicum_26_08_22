@@ -15,16 +15,16 @@ void FillArray(int[,] matr)
         Console.WriteLine();
     }
 }
-void MediumColumn(int[,] matr)    //считает среднее арифметическое столбцов
+void AverageColumn(int[,] matr)    //считает среднее арифметическое столбцов
 {
     for (int j = 0; j < matr.GetLength(1); j++)
         {
-            double average = 0.0;
+            double medium = 0.0;
             for (int i = 0; i < matr.GetLength(0); i++)
             {
-                average += matr[i, j];   
+                medium += matr[i, j];   
             }
-            Console.Write($" {average / matr.GetLength(0)} ");
+            Console.Write($" {medium / matr.GetLength(0)} ");
         }
 }
 Console.Write("Введите размер матрицы. Укажите количество строк m = ");
@@ -34,4 +34,4 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[m, n];
 FillArray(matrix);
 Console.Write("Среднее арифметическое каждого столбца: ");
-MediumColumn(matrix);
+AverageColumn(matrix);
